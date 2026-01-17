@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary: #D4AF37;
+  --primary-gold: #C5A059;
+  --deep-charcoal: #121212;
+  --navy-dark: #0A0F1E;
+  --ivory: #FDFCF0;
+  --deep-matte-black: #0B0B0C;
+  --card-surface: #161618;
+  --border-gold-soft: rgba(197, 160, 89, 0.3);
+  --border-gold-solid: #C5A059;
+  --text-white: #FFFFFF;
+  --text-muted: #A0A0A5;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--navy-dark);
+  color: var(--ivory);
+  scroll-behavior: smooth;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.bg-noise {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxNzuSEAPEVj4_jAI7htLhb08mCARsmP-s9ob3uNe2Y_Y0KeEdvYHsLQVWOEVqjfyhaVnWHZ8LfDBwnJbzODgIFbo71jQWdXw1WSJXts0nWBJ3A1ETR_-i_IeBmM4h0F2nR980vSEDoejPVEQ2uTRbOzqeTJezHpenhrDvVxhfywSkDH8YVAFlvc-MuLOegSEWlMLQjuTBn-E7ZaExvgRtJ97B1jbuRdpbbeG4POtCNDSDjdmiZivGTD-dQIKEbEVy3i9zp5QDXg4');
+  opacity: 0.03;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to bottom, #D4AF37, #8B732A) 1;
+}
+
+.circle-frame {
+  position: relative;
+  padding: 6px;
+  background: linear-gradient(135deg, #D4AF37 0%, #8B732A 100%);
+  border-radius: 50%;
+}
+
+.text-shadow-gold {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.nav-link-hover {
+  position: relative;
+}
+
+.nav-link-hover::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.nav-link-hover:hover::after {
+  width: 100%;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(to right, #C5A059, #EAD196, #C5A059);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.premium-card {
+  background-color: var(--card-surface);
+  border: 1px solid var(--border-gold-soft);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-card:hover {
+  border-color: var(--border-gold-solid);
+  box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.15);
+}
+
+.search-input {
+  background-color: var(--card-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-input:focus {
+  border-color: var(--border-gold-solid);
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-gold);
+}
