@@ -249,12 +249,15 @@ export default function CartPage() {
                     Apply
                   </button>
                 </div>
-                <button className="w-full bg-[#d4af35] hover:bg-[#d4af35]/90 text-[#10151e] font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-3 group hover:shadow-[0_0_15px_rgba(212,175,53,0.4)]">
+                <Link
+                  href="/checkout"
+                  className="w-full bg-[#d4af35] hover:bg-[#d4af35]/90 text-[#10151e] font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-3 group hover:shadow-[0_0_15px_rgba(212,175,53,0.4)]"
+                >
                   <span className="uppercase tracking-[0.2em]">Proceed to Checkout</span>
                   <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
                     arrow_forward
                   </span>
-                </button>
+                </Link>
               </div>
 
               <div className="mt-8 p-4 rounded-lg bg-white/5 flex gap-4 items-start">
